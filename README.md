@@ -1,14 +1,15 @@
 # Dotfiles Configuration for Linux Zshell
-(Image)
+(Need to add the image)
 
 
-## Instructions
+# Instructions
 ### View your current Shell
 Use `echo $SHELL` in your terminal to view the current shell
 that the terminal is using.
 
 ### Install Zsh
 `sudo apt-get update`
+
 `sudo apt-get install zsh`
 
 ### Change the default Shell to Zsh
@@ -17,7 +18,9 @@ that the terminal is using.
 ### Want to change back? (Bash in this demonstration)
 `chsh -s $(which bash)`
 
-## .zshrc
+##
+
+### Zshrc
 This config was originally the Kali Linux's default
 config for Zshell. Since I really liked the structure
 and the features Kali comes with by deafult I decided
