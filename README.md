@@ -1,7 +1,12 @@
 # Configuration for Linux Zshell
-(Need to add the image)
 
-## Information
+![image](https://github.com/L1N3-37/Linux-Zsh-Config/assets/44227327/2e4acad7-16e9-4002-a76b-d9d339a00f6e)
+
+![image](https://github.com/L1N3-37/Linux-Zsh-Config/assets/44227327/6a83b508-44a0-45f6-a0a6-1426b336470c)
+
+![image](https://github.com/L1N3-37/Linux-Zsh-Config/assets/44227327/fe836bb9-f30d-48e1-bec6-6a6037c3e281)
+
+# Information
 This configuration was originally the default Zsh setup from 
 **Kali Linux**. I was impressed by the structure and features 
 that **Kali** includes by default, so I decided to customize it 
@@ -26,7 +31,7 @@ that the terminal is using.
 - If you wish to revert to the default shell, execute:
 `chsh -s $(which bash)`
 
-## Note
+# Note
 This configuration includes **Zsh Syntax Highlighting** setup. 
 You only need to install it to activate the functionality.
 
