@@ -3,35 +3,39 @@
 
 
 # Instructions
-### View your current Shell
+### View current Shell
 Use `echo $SHELL` in your terminal to view the current shell
 that the terminal is using.
 
-### Install Zsh
+### Installation of Zsh
+- Update your package list with the following command:
 `sudo apt-get update`
-
+- Then, install Zsh using the command:
 `sudo apt-get install zsh`
 
-### Change the default Shell to Zsh
+### Switch Default Shell to Zsh
+- To set Zsh as your default shell, execute the following command:
 `chsh -s $(which zsh)`
 
-### Want to change back? (Bash in this demonstration)
+### Reverting to Previous Shell (Demonstration Uses Bash)
+- If you wish to revert to the default shell, execute:
 `chsh -s $(which bash)`
 
 ##
 
 ### Zshrc
 This configuration was originally the default Zsh setup from 
-Kali Linux. I was impressed by the structure and features 
-that Kali includes by default, so I decided to customize it 
+**Kali Linux**. I was impressed by the structure and features 
+that **Kali** includes by default, so I decided to customize it 
 extensively to suit my preferences.
 
 
 ### [Note]
-This configuration includes Zsh Syntax Highlighting setup. 
+This configuration includes **Zsh Syntax Highlighting** setup. 
 You only need to install it to activate the functionality.
 
-Zsh Syntax Highlighting
+### Zsh Syntax Highlighting
+- Install **Zsh Syntax Highlighting** using the following command:
 `sudo apt install zsh-syntax-highlighting`
 
 
