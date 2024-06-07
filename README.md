@@ -21,14 +21,15 @@ that the terminal is using.
 ##
 
 ### Zshrc
-This config was originally the Kali Linux's default
-config for Zshell. Since I really liked the structure
-and the features Kali comes with by deafult I decided
-to heavily customize it to my linking.
+This configuration was originally the default Zsh setup from 
+Kali Linux. I was impressed by the structure and features 
+that Kali includes by default, so I decided to customize it 
+extensively to suit my preferences.
+
 
 ### [Note]
-This config comes with Zsh Syntax Highlighting set up
-meaning you would only need to install it to get it working.
+This configuration includes Zsh Syntax Highlighting setup. 
+You only need to install it to activate the functionality.
 
 Zsh Syntax Highlighting
 `sudo apt install zsh-syntax-highlighting`
