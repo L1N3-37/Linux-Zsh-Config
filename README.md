@@ -1,6 +1,11 @@
 # Dotfiles Configuration for Linux Zshell
 (Need to add the image)
 
+## Information
+This configuration was originally the default Zsh setup from 
+**Kali Linux**. I was impressed by the structure and features 
+that **Kali** includes by default, so I decided to customize it 
+extensively to suit my preferences.
 
 # Instructions
 ### View current Shell
@@ -21,22 +26,16 @@ that the terminal is using.
 - If you wish to revert to the default shell, execute:
 `chsh -s $(which bash)`
 
-##
-
-### Zshrc
-This configuration was originally the default Zsh setup from 
-**Kali Linux**. I was impressed by the structure and features 
-that **Kali** includes by default, so I decided to customize it 
-extensively to suit my preferences.
-
-
-### [Note]
+## Note
 This configuration includes **Zsh Syntax Highlighting** setup. 
 You only need to install it to activate the functionality.
 
 ### Zsh Syntax Highlighting
 - Install **Zsh Syntax Highlighting** using the following command:
 `sudo apt install zsh-syntax-highlighting`
+
+
+
 
 
 
