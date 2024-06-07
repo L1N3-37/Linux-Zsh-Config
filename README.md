@@ -1,4 +1,4 @@
-# Dotfiles Configuration for Linux Zshell
+# Configuration for Linux Zshell
 (Need to add the image)
 
 ## Information
