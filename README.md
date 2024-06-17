@@ -38,11 +38,3 @@ You only need to install it to activate the functionality.
 ### Zsh Syntax Highlighting
 - Install **Zsh Syntax Highlighting** using the following command:
 `sudo apt install zsh-syntax-highlighting`
-
-
-
-
-
-
-
-

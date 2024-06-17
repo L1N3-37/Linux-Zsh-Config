@@ -260,23 +260,3 @@ fi
 if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
-
-# My own alias :D
-alias mega='mega-cmd'
-alias firefox='firefox-esr'
-
-# Windows directory alias
-alias td500='/mnt/c/Users/TD500'
-
-
-
-# Create the runtime directory if it doesn't exist
-mkdir -p /tmp/$USER-runtime-dir
-
-# Set the XDG_RUNTIME_DIR environment variable
-export XDG_RUNTIME_DIR=/tmp/$USER-runtime-dir
-
-# Ensure correct permissions
-chmod 700 /tmp/$USER-runtime-dir
-
-export DISPLAY=172.28.240.1:0
