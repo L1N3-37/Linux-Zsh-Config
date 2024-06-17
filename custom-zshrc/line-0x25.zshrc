@@ -7,35 +7,21 @@ if [ -f ~/.dircolors ]; then
     eval "$(dircolors ~/.dircolors)"
 fi
 
-# ----------------------- Report the status of background jobs immediately ----------------------
 setopt notify
 setopt PROMPT_SUBST
-#
-#
-# ---------------------------------- Adding git repo to prompt ----------------------------------
+
+# Adding git repo to prompt
+
 # Load version control information
 autoload -Uz vcs_info
 precmd() { vcs_info }
-#
+
 # Format the vcs_info_msg_0_ variable
 zstyle ':vcs_info:git*' formats "- [%F{cyan}%r/%S] -> [%b] %m%u%c"
-#
-# -----------------------------------------------------------------------------------------------
-#
-#
-# Determine if color prompt should be enabled based on terminal type
-#case "$TERM" in
-#    xterm-color|*-256color) color_prompt=yes;;
-#esac
-#
-#
-# --------------------------------------- Terminal Prompt ---------------------------------------
+
 # Set up the prompt with git branch name [conditional brackets only show when git repo is active]
 PROMPT=''$'\n%F{cyan}┌─ [%F{white}${PWD/#$HOME/~}%F{cyan}] ${vcs_info_msg_0_}'$'\n└─── > '
-#
-# -----------------------------------------------------------------------------------------------
-#
-#
+
 # enable color support of ls, less and man, and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -119,18 +105,13 @@ if [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
     ZSH_HIGHLIGHT_STYLES[cursor-matchingbracket]=standout
 fi
 
-
-
-
-
-# My alias
-alias td500='/mnt/c/Users/TD500'
-alias mega='mega-cmd'
-alias firefox='firefox-esr'
-alias n='nano'
-alias reload='source ~/.zshrc'
-
 # some more ls aliases
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
+
+# Custom alias
+alias mega='mega-cmd'
+alias firefox='firefox-esr'
+alias n='nano'
+alias reload='source ~/.zshrc'
