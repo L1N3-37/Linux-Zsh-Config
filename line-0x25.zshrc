@@ -9,7 +9,6 @@ fi
 
 # ----------------------- Report the status of background jobs immediately ----------------------
 setopt notify
-setopt correct
 setopt PROMPT_SUBST
 #
 #
@@ -19,7 +18,7 @@ autoload -Uz vcs_info
 precmd() { vcs_info }
 #
 # Format the vcs_info_msg_0_ variable
-zstyle ':vcs_info:git*' formats "- [%F{white}%r/%S%F{cyan}] -> [%b] %m%u%c"
+zstyle ':vcs_info:git*' formats "- [%F{cyan}%r/%S] -> [%b] %m%u%c"
 #
 # -----------------------------------------------------------------------------------------------
 #
@@ -55,6 +54,23 @@ if [ -x /usr/bin/dircolors ]; then
     zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
     zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 fi
+
+# enable completion features
+autoload -Uz compinit
+compinit -d ~/.cache/zcompdump
+zstyle ':completion:*:*:*:*:*' menu select
+zstyle ':completion:*' auto-description 'specify: %d'
+zstyle ':completion:*' completer _expand _complete
+zstyle ':completion:*' format 'Completing %d'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' list-colors 'di=01;36'
+zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' rehash true
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle ':completion:*' use-compctl false
+zstyle ':completion:*' verbose true
+zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # enable syntax-highlighting
 if [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
@@ -107,7 +123,14 @@ fi
 
 
 
-# Alias
+# My alias
 alias td500='/mnt/c/Users/TD500'
 alias mega='mega-cmd'
-alias .zshrc='~/.config/custom/.zshrc'
+alias firefox='firefox-esr'
+alias n='nano'
+alias reload='source ~/.zshrc'
+
+# some more ls aliases
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
